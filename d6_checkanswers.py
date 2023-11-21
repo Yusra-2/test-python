@@ -30,5 +30,5 @@ def grade_exam(q_num, marks):
             mark= q_num*marks
         else:
             print("Q", i+1)
-    print(mark, "out of 12")
+    print(mark, "out of 24")
 grade_exam(12,2)
