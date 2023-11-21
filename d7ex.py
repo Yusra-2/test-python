@@ -76,14 +76,26 @@ while(True):
         result+=y
     else:
         break
-print(result)"""
+print(result)
 
 #print num grater than 100 in the next position only
 b= [100,201,99,101]
 for i in b:
     if (i > 100):
         print(i, b.index(i))
-        break
+        break"""
 
-
+sides= [1,2,3,4,5,6]
+counter= []
+y= int(input("enter how many times you got each side: "))
+def main():
+    countInput()
+    printCounter()
     
+def countInput(sides):
+    
+def printCounter(counter):
+    return countInput()
+    print(sides, ":", counter, end="")
+
+main()
