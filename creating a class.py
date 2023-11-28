@@ -68,14 +68,45 @@ def main():
     
 main()
 """
-# exercose
+# shapes exercise
 class Shape:
-    def  __init__(self, name, color, description):
-        self.name = name
+    def  __init__(self,color, name):
         self.color= color
-        self.description= description
-        
-    def Area():
-        
-        
-        
+        self.name = name
+    def __str__(self):   
+        return "hello your shape is {} {} ".format(self.color,self.name)    
+
+class Circle(Shape):
+    def  __init__(self,color, name, r):
+        super().__init__(color, name)
+        self.r= r
+    def Carea(self):
+        aoc= (3.14*(self.r**2))      
+        return aoc      
+    def __str__(self):   
+        return "hello your shape is {} {} and the radius = {}".format(self.name, self.color, self.r)
+
+class Square(Shape):    
+    def  __init__(self,color, name, length):
+         super().__init__(color, name)
+         self.length= length
+    def Sarea(self):   
+        aos= (self.length**2)
+        return aos
+    def __str__(self):   
+        return "hello your shape is {} {} and the length = {}".format(self.color, self.name, self.length)
+                   
+                   
+c1= Circle("red","circle", 10)
+c2= Circle("blue","circle", 10)
+s1= Square("yellow","square", 5)
+s2= Square("green","square", 2)
+
+print(c1)
+print("the area =", int(c1.Carea()))
+print(c2)
+print("the area =", int(c2.Carea()))
+print(s1)
+print("the area =", int(s1.Sarea()))
+print(s2)
+print("the area =", int(s2.Sarea()))
