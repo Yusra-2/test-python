@@ -1,0 +1,71 @@
+"""
+li= [10,50,20,70,80,40,30]
+key= int(input("nter the key"))
+low= 0
+high= (len(li))
+#mid= (low + high)/2
+
+for i in li:
+    mid= (low + high)/2
+    if (mid == key):
+        print("key is: ", mid)
+    elif(key < mid):
+        mid -=1
+        print("")
+    else:
+        mid +=1
+        print("")
+ 
+# binary search exercise
+def binary_search(key,lst):
+    li, hi =0, len(lst)-1
+    while(li<hi):
+        mid= (li + hi)//2
+        if(lst[mid] == key):
+            return mid
+        elif(lst[mid] < key):
+            li = mid +1
+        else:
+            hi = mid-1
+    return -1
+num = [10,50,20,70,80,40,30]
+num.sort()
+print(num)
+target = int(input("enter your target"))
+r= print("yor target: ", binary_search(target, num))
+
+
+#how to find the sqrt of x
+def binary_search(x):
+    li = 1
+    hi= x
+    if (x == 1 or x == 0):
+        return x
+    while(li<=hi):
+        mid= (li + hi)//2
+        if(mid* mid == x):
+           return mid 
+        elif(mid* mid < x):
+            li = mid+1
+        else:
+            hi = mid-1
+    return -1
+
+num= int(input("enter a number: "))
+result = binary_search(num)
+print(result)
+"""
+
+#inserton sort exercise
+def ins_sort(array):
+    for step in range(1, len(array)):
+        key = array[step]
+        j = step -1
+        while j >=0 and key < array[j]:
+            array[j+1]= array[j]
+            j =j-1
+        array[j+1]= key
+data= [6, 2, 1, 9,8]
+ins_sort(data)
+print("sorted array in ascending order: ")
+print(data)
